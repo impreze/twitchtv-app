@@ -1,25 +1,49 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Twitchtv JSON API</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css">
 
-  <!-- CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Raleway:300,700,400' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=OpenSans:300,700,400' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link href="css/style.css" rel="stylesheet" />
+    
+    
+    
+  </head>
 
-  <!-- SCRIPTS -->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/angular.min.jsangular.min.js"></script>
-  <script src="js/app.js"></script>
+  <body>
 
-</head>
+    <div ng-app="Twitchtv" ng-controller="MainController" class="container app">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-sm-12 text-center">
+      <h1 class="text-center">Twitchtv App</h1><br>      
+    </div>
+  </row>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-sm-12" ng-repeat="user in users">
+      <div class="user-banner" ng-class="whichBG(user)">
+        <a href="http://www.twitch.tv/{{user.name}}" target="_blank">
+        <img class="user-logo img-circle" ng-src={{user.logo}}>
+					<span>{{user.name}}</span>
+					<span class="text-right stream-name">{{user.streamInfo}}</span>
+        </a>
+      </div>
+    </div>
+    
+  </div>
+</div>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
 
-<body>
+        <script src="js/app.js"></script>
 
-</body>
-
+    
+    
+    
+  </body>
 </html>
