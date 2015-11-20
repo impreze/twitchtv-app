@@ -1,26 +1,49 @@
+body {
+  background-color: #ffe1e1;
+}
 
-.app{
-  margin-top:50px;
+.app {
+  margin: 50px auto;
 }
 
 .row {
-  padding:20px;
+  padding: 20px;
+}
+
+.header-img {
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 30px
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: solid 5px #6441A5;
+  transition: border 0.3s;
+	width: 90%;
+}
+input[type="text"]:focus,
+input[type="text"].focus {
+  border: solid 5px #969696;
 }
 
 .user-banner {
-  background-color:#eee;
+  background-color: #eee;
   font-size: 30px;
-  margin-bottom:10px;
+  margin-bottom: 10px;
   min-height: 80px;
 }
+
 .user-logo {
   width: 10%;
 }
 
-.user-banner a:link, a:visited {
+.link {}
+
+.user-banner a:link,
+a:visited {
   display: block;
   color: #333;
-  width: 100%;
   min-height: 90px;
   padding: 20px;
   verticle-align: middle;
@@ -31,17 +54,31 @@
 .online {
   background-color: #BAFFA3;
 }
-.online a:hover, a:active {
+
+.online a:hover,
+a:active {
   background-color: #94CC82;
 }
+
 .offline {
+  background-color: #fff4a3;
+}
+
+.offline a:hover,
+a:active {
+  background-color: #e5cf92;
+}
+
+.notfound {
   background-color: #FFBAA3;
 }
 
-.offline a:hover, a:active {
+.notfound a:hover,
+a:active {
   background-color: #E5A792;
 }
 
 .stream-name {
-	font-size:12px;
+  font-size: 12px;
+	font-style:oblique;
 }
